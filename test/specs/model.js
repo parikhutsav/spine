@@ -536,7 +536,7 @@ describe("Model", function(){
     it("can fire save events", function(){
       Asset.bind("save", spy);
       var asset = Asset.create({name: "cartoon world.png"});
-      expect(spy).toHaveBeenCalledWith(asset, {});
+      expect(spy).toHaveBeenCalledWith(asset, {name: "cartoon world.png"});
 
       asset.save();
       expect(spy).toHaveBeenCalled();

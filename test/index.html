@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="lib/spineTest.css">
   <script type="text/javascript" src="lib/jasmine.js"></script>
   <script type="text/javascript" src="lib/jasmine-html.js"></script>
+  <script type="text/javascript" src="lib/boot.js"></script>
   <script type="text/javascript" src="lib/dynamicLoader.js"></script>
   <!--  <script src="lib/jquery.js" type="text/javascript" charset="utf-8"></script>-->
   <script src="../lib/spine.js" type="text/javascript" charset="utf-8"></script>
@@ -45,18 +46,5 @@
       <input type="submit" value="Run" />
     </form>
   </div>
-  <script type="text/javascript">
-    var jasmineEnv = jasmine.getEnv();
-    jasmineEnv.updateInterval = 250;
-
-    var htmlReporter = new jasmine.HtmlReporter();
-    jasmineEnv.addReporter(htmlReporter);
-    jasmineEnv.specFilter = function(spec) {
-      return htmlReporter.specFilter(spec);
-    };
-
-    jasmine.getEnv().execute();
-    document.getElementById('usedJquerysrc').innerHTML = window.dependencySrc;
-  </script>
 </body>
 </html>
